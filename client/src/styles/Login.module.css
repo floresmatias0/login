@@ -1,0 +1,34 @@
+.div{
+    width: 100%;
+    text-align: center;
+}
+.container{
+    width: 30em;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.form{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+.form label{
+    line-height: 3em; 
+}
+.form input::placeholder{
+    text-align: center;
+}
+.button{
+    width: 10em;
+    margin: 1em;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    cursor:pointer;
+}
+.form p{
+    color: red;
+    margin: 0;
+}
