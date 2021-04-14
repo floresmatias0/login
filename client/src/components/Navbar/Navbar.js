@@ -8,7 +8,7 @@ const Navbar = () => {
         <>
             <nav className={styles.nav}>
                <Link className={styles.link} to='/'>
-                   <h1>Henry proyect nav</h1> 
+                   <h1>Henry proyect login</h1> 
                 </Link>
             </nav>
         </>

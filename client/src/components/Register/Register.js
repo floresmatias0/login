@@ -1,13 +1,16 @@
 import React from 'react';
 import {useForm} from 'react-hook-form'
 import axios from 'axios'
+import swal from 'sweetalert2'
 import styles from '../../styles/Register.module.css'
+import { useHistory } from 'react-router-dom';
 
 const Register = () => {
 
+    const history = useHistory();
+
     const{register,handleSubmit,formState: {errors}} = useForm();
     const onSubmit = (input) => {
-        console.log(input);
         const options = {
             method: 'POST',
             url: 'http://localhost:3001/users',
@@ -23,6 +26,16 @@ const Register = () => {
         }
         try{
             axios.request(options)
+            .then(user=>console.log(user))
+            swal.fire({
+                text: 'register complete',
+                icon: 'info',
+                confirmButtonText: 'ok'
+            })
+            setTimeout(()=>{
+               history.push('/login') 
+            },1500)
+            
         }catch{
             console.log('ERROR')
         }
@@ -59,7 +72,8 @@ const Register = () => {
                     <input 
                         name='password'
                         type='password'
-                        {...register('password',{ required:'this camp is required'})} 
+                        {...register('password',{ required:'this camp is required', 
+                        minLength:{value:6, message:'this password is short'}})} 
                         placeholder='insert password'/> 
                         {errors.password && <p>{errors.password.message}</p>}
                     <button 

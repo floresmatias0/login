@@ -2,20 +2,57 @@
     width: 100%;
 }
 .container{
-    width: 30em;
+    width: 13em;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 1.5rem;
+}
+.container h1{
+    font-family: 'Acme', sans-serif;
 }
 .label{
     line-height: 3em;
 }
-.button{
-    width: 10em;
-    margin: 1em;
-    margin-left: 50%;
-    transform: translateX(-50%);
+.buttonA{
+    width: 8em;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 0.2em;
+    border: none;
+    background-color: rgb(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 2px black;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
     cursor:pointer;
+    outline: none;
+}
+.buttonB{
+    width: 8em;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 0.2em;
+    border: none;
+    background-color: rgb(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 2px black;
+    padding-bottom: 0.2em;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    cursor:pointer;
+    outline: none;
+}
+.button:active{
+    box-shadow: none;
 }
