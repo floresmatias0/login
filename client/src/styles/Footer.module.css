@@ -1,0 +1,9 @@
+.p{
+    text-align: center;
+    font-family: 'Acme', sans-serif;
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
