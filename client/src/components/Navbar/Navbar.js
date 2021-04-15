@@ -10,6 +10,7 @@ const Navbar = () => {
                <Link className={styles.link} to='/'>
                    <h1>Henry proyect login</h1> 
                 </Link>
+                <p className={styles.p}>by Matias Flores</p>
             </nav>
         </>
     )
