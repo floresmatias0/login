@@ -1,5 +1,8 @@
-.div{
+.all{
     width: 100%;
+}
+.div{
+    width: 60%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -7,9 +10,13 @@
 .div h1{
     margin-top: 3em;
     font-family: 'Acme', sans-serif;
+    color: #FDC123;
+    text-shadow: 3px 3px 6px #69492b;
+
 }
 .div h2{
     font-family: 'Balsamiq Sans', cursive;
+    text-shadow: 2px 2px 4px #69492b;
 }
 .button{
     width: 8em;
@@ -27,4 +34,12 @@
     margin-right: auto;
     cursor:pointer;
     outline: none;
+}
+.button:active{
+    transform: scale(0.95);
+}
+@media(max-width:750px){
+    .div{
+        width: 100%;
+    }
 }

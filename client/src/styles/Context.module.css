@@ -1,0 +1,46 @@
+.customButton{
+    border: 2px solid black;
+    border-radius: 0.5em;
+    font-size: 1.8rem;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-family: 'Acme',sans-serif;
+    box-shadow: 2px 2px 5px black;
+    outline: none;
+}
+.customButton:active{
+    box-shadow: none;
+}
+.customTitle{
+    color: black;
+    font-size: 1.8rem;
+    font-family: 'Acme',sans-serif;
+}
+.customImage{
+    width: 12em;
+    height: 12em;
+    margin: 0;
+}
+.customHeader{
+    padding:0;
+    width: 12em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.customPopup{
+    width: 27em;
+    height: 27em;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+@media(max-width:480px){
+    .customImage{
+        width: 11em;
+        height: 11em;
+        margin: 0;
+    } 
+    .customButton{
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}

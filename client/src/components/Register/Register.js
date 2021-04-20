@@ -4,11 +4,11 @@ import axios from 'axios'
 import swal from 'sweetalert2'
 import styles from '../../styles/Register.module.css'
 import { useHistory } from 'react-router-dom';
+import animanias from '../../img/the-warners-nusher.png'
 
 const Register = () => {
 
     const history = useHistory();
-
     const{register,handleSubmit,formState: {errors}} = useForm();
     const onSubmit = (input) => {
         const options = {
@@ -28,9 +28,17 @@ const Register = () => {
             axios.request(options)
             .then(user=>console.log(user))
             swal.fire({
-                text: 'register complete',
-                icon: 'info',
-                confirmButtonText: 'ok'
+                buttonsStyling: false,
+                customClass: {
+                    header: styles.customHeader,
+                    popup: styles.customPopup,
+                    confirmButton: styles.customButton,
+                    content: styles.customTitle,
+                    image: styles.customImage
+                  },
+                text: 'register complete!',
+                confirmButtonText: 'ok',
+                imageUrl: animanias
             })
             setTimeout(()=>{
                history.push('/login') 
@@ -40,9 +48,10 @@ const Register = () => {
             console.log('ERROR')
         }
     }
-
+    
     return (
-        <div className={styles.div}>
+        <div className={styles.all}>
+            <div className={styles.div}>
             <div className={styles.container}>
                <h1>Register</h1>
                <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -81,10 +90,12 @@ const Register = () => {
                         className={styles.button}>
                             Register
                     </button>
-               </form>
-                 
-            </div>  
+                </form>
+                    
+                </div>  
+            </div>
         </div>
+        
     )
 }
 

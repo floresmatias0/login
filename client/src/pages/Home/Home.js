@@ -23,12 +23,15 @@ const Home = ({fetchUserIdEffect,STORE_USER}) => {
     }
 
     return (
-        <div className={styles.div}>
-            <h1>Thanks for testing the page</h1>
-            <h2>Welcome back {STORE_USER.user.name}</h2>
-            <button className={styles.button} onClick={handleProfile}>profile</button>
-            <button className={styles.button} onClick={handleLogout}>logout</button>
+        <div className={styles.all}>
+            <div className={styles.div}>
+                <h1>Thanks for testing the page</h1>
+                <h2>Welcome back {STORE_USER.user.name}</h2>
+                <button className={styles.button} onClick={handleProfile}>profile</button>
+                <button className={styles.button} onClick={handleLogout}>logout</button>
+            </div> 
         </div>
+
     )
 }
 

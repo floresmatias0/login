@@ -1,13 +1,64 @@
+.all{
+    width: 100%; 
+}
 .div{
-    width: 100%;
+    width: 60%;
 }
 .div h1{
     text-align: center;
     margin-top: 2em;
     font-family: 'Acme', sans-serif;
+    color: #FDC123;
+    text-shadow: 3px 3px 6px #69492b;
 }
-.div p{
+.allContainer{
+    display: flex;
+    flex-direction: row;
+}
+.container{
+    display: flex;
+    flex-direction: column;  
+    width: 50%;
+}
+.div span{
+    width: 50%;
     text-align: center;
     font-family: 'Balsamiq Sans', cursive;
     font-size: 1.5rem;
+    background-color: rgb(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 2px black;
+    color: white;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.5em;
+
+}
+.div p{
+    width: 50%;
+    text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 1.5rem;
+    background-color: #FDC123;
+    box-shadow: 2px 2px 2px black;
+    color: #CA1619;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin:0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5em;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+
+}
+.div p:last-child{
+    width: 100%;
+}
+@media(max-width:750px){
+    .div{
+        width: 100%;
+    }
 }

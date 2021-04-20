@@ -44,7 +44,7 @@ const Login = () =>{
     }
 
     return (
-        <>
+        <div className={styles.all}>
         <div className={styles.div}>
             <h1>Login</h1>
             <div className={styles.container}>
@@ -69,7 +69,7 @@ const Login = () =>{
             </div>
             
         </div>
-        </>
+        </div>
     )
 }
 

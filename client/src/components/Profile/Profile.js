@@ -17,19 +17,30 @@ const Profile = ({fetchUserIdEffect,STORE_USER}) =>{
     },[fetchUserIdEffect])
 
     return (
-        <>
+        <div className={styles.all}>
             {STORE_USER && STORE_USER.userLoading?(
                 <p>Loading...</p>
             ):(
                 <div className={styles.div}>
                     <h1>profile</h1>
-                    <p>name: {STORE_USER.user.name}</p>
-                    <p>surname: {STORE_USER.user.surname}</p>
-                    <p>email: {STORE_USER.user.email}</p>
-                    <p>id: {STORE_USER.user.id}</p>
+                    <div className={styles.allContainer}>
+                        <div className={styles.container}>
+                            <span>id:</span>
+                            <span>name:</span>
+                            <span>surname:</span>
+                            <span>email:</span>
+                        </div>
+                        <div className={styles.container}>
+                            <p>{STORE_USER.user.id}</p>
+                            <p>{STORE_USER.user.name}</p>
+                            <p>{STORE_USER.user.surname}</p>
+                            <p>{STORE_USER.user.email} </p>
+                        </div>
+                    </div>
+                    
                 </div>
             )}        
-        </>
+        </div>
     )
 }
 const mapStateToProps = (state) => {

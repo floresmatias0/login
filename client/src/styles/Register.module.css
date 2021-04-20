@@ -1,5 +1,8 @@
-.div{
+.all{
     width: 100%;
+}
+.div{
+    width: 60%;
 }
 .container{
     width: 20em;
@@ -7,6 +10,11 @@
     margin-right: auto;
     text-align: center;
     font-family: 'Acme', sans-serif;
+
+}
+.container h1{
+    color: #FDC123;
+    text-shadow: 3px 3px 6px #69492b;
 }
 .form{
     width: 100%;
@@ -17,8 +25,9 @@
     
 }
 .form label{
-    line-height: 3em; 
+    line-height: 2em; 
     font-size: 1.3rem;
+    text-shadow: 2px 2px 4px #69492b;
 }
 .form input{
     text-align: center;
@@ -31,6 +40,8 @@
 }
 .form input::placeholder{
     text-align: center;
+    font-family: 'Acme', sans-serif;
+    font-size: 1.1rem;
 }
 .button{
     width: 8em;
@@ -50,7 +61,50 @@
     cursor:pointer;
     outline: none;
 }
+.button:active{
+    transform: scale(0.95)
+}
 .form p{
     color: red;
     margin: 0;
+}
+.customButton{
+    border: 2px solid black;
+    border-radius: 0.5em;
+    font-size: 1.8rem;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-family: 'Acme',sans-serif;
+    box-shadow: 2px 2px 5px black;
+    outline: none;
+}
+.customButton:active{
+    box-shadow: none;
+}
+.customTitle{
+    color: black;
+    font-size: 1.8rem;
+    font-family: 'Acme',sans-serif;
+}
+.customImage{
+    width: 12em;
+    height: 12em;
+    margin: 0;
+}
+.customHeader{
+    padding:0;
+    width: 12em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.customPopup{
+    width: 27em;
+    height: 27em;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+@media(max-width:750px){
+    .div{
+        width: 100%;
+    }
 }

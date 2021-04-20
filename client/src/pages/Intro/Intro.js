@@ -3,6 +3,7 @@ import UserContext from '../../context/UserContext'
 import {useHistory} from 'react-router-dom'
 import {connect} from 'react-redux'
 import swal from 'sweetalert2'
+import animaics from '../../img/wakko-warner.jpg'
 import styles from '../../styles/Intro.module.css'
 
 const Intro = ({STORE_USER}) => {
@@ -31,9 +32,17 @@ const Intro = ({STORE_USER}) => {
     const handleLogin = () =>{
         if(localStorage.getItem('email')){
             swal.fire({
+                buttonsStyling: false,
+                customClass: {
+                    header: styles.customHeader,
+                    popup: styles.customPopup,
+                    confirmButton: styles.customButton,
+                    content: styles.customTitle,
+                    image: styles.customImage
+                  },
                 text: '¡already logged!',
-                icon: 'info',
-                confirmButtonText: 'Cool'
+                imageUrl: animaics,
+                confirmButtonText: 'Cool',
             })
         }else{
             history.push('/login')
@@ -43,7 +52,7 @@ const Intro = ({STORE_USER}) => {
     return (
         <div className={styles.div}>
             <div className={styles.container}>
-                <h1>Welcome</h1>                
+                <h1 className= {styles.bigEntrance}>Welcome</h1>                
                 {localStorage.getItem('email') ?(
                     <>
                     <button 
@@ -58,25 +67,27 @@ const Intro = ({STORE_USER}) => {
                     </button>
                     </>
                 ):(
-                    <p></p>
+                <>
+                    <label className={styles.label}>
+                        ¿Do you have a account?
+                    </label>
+                    <button 
+                        className={styles.buttonA} 
+                        onClick={handleRegister}>
+                            register
+                    </button>
+                    <label className={styles.label}>
+                        if already resgister
+                    </label>
+                    <button 
+                        className={styles.buttonA} 
+                        onClick={handleLogin}>
+                            login
+                    </button>
+                </>
                 )
                 }
-                <label className={styles.label}>
-                    ¿Do you have a account?
-                </label>
-                <button 
-                    className={styles.buttonA} 
-                    onClick={handleRegister}>
-                        register
-                </button>
-                <label className={styles.label}>
-                    if already resgister
-                </label>
-                <button 
-                    className={styles.buttonA} 
-                    onClick={handleLogin}>
-                        login
-                </button>
+
 
             </div>
         </div>

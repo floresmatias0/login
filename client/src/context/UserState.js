@@ -3,6 +3,8 @@ import UserContext from './UserContext'
 import axios from 'axios'
 import swal from 'sweetalert2'
 import { useHistory } from 'react-router-dom'
+import styles from '../styles/Context.module.css'
+import animaniacs from '../img/sticker-png-tasmanian-devil-yakko-wakko-and-dot-looney-tunes-warner-bros-cartoons-animation-yakko-an.png'
 
 const UserState = (props) => {
 
@@ -21,9 +23,17 @@ const UserState = (props) => {
             localStorage.clear()
             document.cookie = `path =; username=; expires=Thu, 01 Jan 1970 00:00:00 UTC;`
             swal.fire({
+                buttonsStyling: false,
+                customClass: {
+                    header: styles.customHeader,
+                    popup: styles.customPopup,
+                    confirmButton: styles.customButton,
+                    content: styles.customTitle,
+                    image: styles.customImage
+                  },
                 text: '¡Thanks for your visit!',
-                icon: 'info',
-                confirmButtonText: 'Cool'
+                confirmButtonText: 'Cool',
+                imageUrl: animaniacs
             })
             history.push('/')
         }catch(err){
