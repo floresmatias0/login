@@ -26,14 +26,12 @@ const Profile = ({fetchUserIdEffect,STORE_USER}) =>{
                     <div className={styles.allContainer}>
                         <div className={styles.container}>
                             <span>id:</span>
-                            <span>name:</span>
-                            <span>surname:</span>
-                            <span>email:</span>
-                        </div>
-                        <div className={styles.container}>
                             <p>{STORE_USER.user.id}</p>
+                            <span>name:</span>
                             <p>{STORE_USER.user.name}</p>
+                            <span>surname:</span>
                             <p>{STORE_USER.user.surname}</p>
+                            <span>email:</span>
                             <p>{STORE_USER.user.email} </p>
                         </div>
                     </div>

@@ -3,7 +3,7 @@ const cors = require('cors');
 
 server.use(cors({
   credentials: true,
-  origin: "http://104.236.92.12/" || "*"
+  origin: "http://localhost:3000" || "*"
 }));
 
 module.exports = server;
